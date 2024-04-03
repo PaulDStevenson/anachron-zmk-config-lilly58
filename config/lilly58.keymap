@@ -239,49 +239,62 @@ ZMK_BEHAVIOR(dyn_macro_morph, mod_morph,
     keymap {
         compatible = "zmk,keymap";
         default_layer {
+        // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   =   |
+            // |  SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | CTRL |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //              | Undefined  | unknown  | Numlayer |  Shift |  | Space | SYMLayer | undefined  | undefined   |
+
+            label = "Base";
             bindings = <
-            &kp B     &kp L     &kp D     &kp W     &kp Z     &kp APOS    &kp F     &kp O        &kp U      &kp J 
-            H_LGUI(N) H_LALT(R) H_LCTL(T) H_LSFT(S) &kp G     &kp Y       H_RSFT(H) H_RCTL(A)    H_RALT(E)  H_RGUI(I) 
-            &kp Q     &kp X     &kp M     &kp C     &kp V     &kp K       &kp P     &comma_morph &dot_morph &qmark_morph
-                                &kp C_MUTE SMRT_NUM SK_SHFT   &spc_morph  SMRT_SYM  XXX 
+            &kp ESC &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6   &kp N7    &kp N8   &kp N9    &kp N0 &kp MINUS
+            &kp TAB &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y    &kp U     &kp I        &kp O      &kp P  &kp EQUAL
+            &kp LEFT_SHIFT  H_LGUI(A) H_LALT(S) H_LCTL(D) H_LSFT(F) &kp G     &kp H       H_RSFT(J) H_RCTL(K)    H_RALT(L)  H_RGUI(SEMICOLON) &kp SQT 
+            &kp LCTRL   &kp Z   &kp X &kp C   &kp V &kp B &kp LBKT  &kp RBKT  &kp N &kp M  &kp COMMA &kp DOT    &kp FSLH    &kp RIGHT_SHIFT
+                               XXX &kp C_MUTE SMRT_NUM SK_SHFT   &spc_morph  SMRT_SYM  XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN  &inc_dec_kp UP DOWN>;
         };
         num_layer {
             bindings = <
-            &swapper  &kp PLUS  &kp MINUS  &kp EQUAL  &kp CARET  &fn_pcnt   &fn_6  &fn_7  &fn_8  &fn_ast 
-            SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   &kp HASH   &fn_dot    &fn_0  &fn_1  &fn_2  &fn_9 
-            S_UNDO    S_CUT     S_COPY     S_PASTE    S_REDO     &fn_dllr   &fn_3  &fn_4  &fn_5  &fn_fslh
-                                XXX        ___        ___        &kp SPACE  ___    XXX 
+            XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+            XXX &swapper  &kp PLUS  &kp MINUS  &kp EQUAL  &kp CARET  &fn_pcnt   &fn_6  &fn_7  &fn_8  &fn_ast XXX
+            XXX SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   &kp HASH   &fn_dot    &fn_0  &fn_1  &fn_2  &fn_9 XXX
+            XXX S_UNDO    S_CUT     S_COPY     S_PASTE    S_REDO     &fn_dllr   &fn_3  &fn_4  &fn_5  &fn_fslh XXX
+                            XXX    XXX        ___        ___        &kp SPACE  ___    XXX XXX 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
         sym_layer {
             bindings = <
-            &kp TILDE     &kp LT        &kp LBKT  &kp RBKT  &kp GT        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &dyn_macro_morph
-            H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp ENTER 
-            &kp BSLH      &kp AT        &kp LBRC  &kp RBRC  &kp PIPE      &kp ESC   &kp BSPC   &kp DEL    &kp TAB    &key_repeat 
-                                        ___       ___       XXX           ___       ___        XXX 
+            XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+            XXX &kp TILDE     &kp LT        &kp LBKT  &kp RBKT  &kp GT        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &dyn_macro_morph XXX
+            XXX H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp ENTER XXX
+            XXX &kp BSLH      &kp AT        &kp LBRC  &kp RBRC  &kp PIPE      &kp ESC   &kp BSPC   &kp DEL    &kp TAB    &key_repeat XXX
+                                        XXX ___       ___       XXX           ___       ___        XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
  
         merge_layer {
             bindings = <
-            &swapper &kp PLUS  &kp MINUS  &kp EQUAL  &kp CARET  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &dyn_macro_morph
-            SK_LGUI  SK_LALT   SK(LCTL)   SK(LSFT)   SMRT_MED   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp ENTER 
-            S_UNDO   S_CUT     S_COPY     S_PASTE    S_REDO     &kp ESC   &kp BSPC   &kp DEL    &kp TAB    &key_repeat
-                               XXX        ___        ___        ___       ___        XXX 
+            XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+            XXX &swapper &kp PLUS  &kp MINUS  &kp EQUAL  &kp CARET  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &dyn_macro_morph XXX
+            XXX SK_LGUI  SK_LALT   SK(LCTL)   SK(LSFT)   SMRT_MED   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp ENTER XXX
+            XXX S_UNDO   S_CUT     S_COPY     S_PASTE    S_REDO     &kp ESC   &kp BSPC   &kp DEL    &kp TAB    &key_repeat XXX
+                               XXX XXX        ___        ___        ___       ___        XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
         media_layer {
             bindings = <
-            ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP 
-            SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU
-            ___       ___       ___        ___        ___    &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS
-                                ___        ___        ___    ___            ___           ___ 
+            XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+            XXX ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
+            XXX SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
+            XXX ___       ___       ___        ___        ___    &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+                                XXX ___        ___        ___    ___            ___           ___ XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
