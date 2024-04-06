@@ -124,14 +124,14 @@ ZMK_BEHAVIOR(sk_no_lazy, sticky_key, // sticky-key without lazy
 // this allows for rolling layer keys, and accessing modifiers on base, while not getting in the way.
 // this behavior is especially useful for use with a mouse because sticky odifiers don't linger
 #define STICKY_TAP_MS 200
-
+ 
 // tap: sticky-mod | hold: mod
 #define SK(mod) &sk_mod mod mod
 ZMK_BEHAVIOR(sk_mod, hold_tap,
     flavor = "balanced"; // balanced because we want to consider as tap when rolling
     tapping-term-ms = <STICKY_TAP_MS>; 
     bindings = <&kp>, <&sk>; 
-    hold-while-undecided; // requires pr
+    // hold-while-undecided; // requires pr  - PR #1788 ? 
 )
 // for GUI/ALT, we don't want to trigger a tap, so we disable hold while undecided
 #define SK_LGUI &sk_mod_gui LGUI LGUI 

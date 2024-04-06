@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk-experimental
       remote: PaulDStevenson
-      revision: main
+      revision: local
       import: app/west.yml
   self:
     path: config
