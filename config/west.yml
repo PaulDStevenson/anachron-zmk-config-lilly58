@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: theol0403
-      url-base: https://github.com/theol0403
+    - name: PaulDStevenson
+      url-base: https://github.com/PaulDStevenson
   projects:
-    - name: zmk
-      remote: theol0403
-      revision: local
+    - name: zmk-experimental
+      remote: PaulDStevenson
+      revision: main
       import: app/west.yml
   self:
     path: config
