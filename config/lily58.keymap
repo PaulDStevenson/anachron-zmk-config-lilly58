@@ -14,23 +14,29 @@
 
 // This time make base win, base2 Game and base3 MacOS
 
+// #define BASE 0
+// #define G_BASE 1
+// #define M_BASE 2
+// #define NUM 3
+// #define M_NUM 4
+// #define SYM 5
+// #define M_SYM 6
+// #define MERGE 7
+// #define M_MERGE 8
+// #define MEDIA 9
+// #define M_MEDIA 10
+
 #define BASE 0
-#define G_BASE 1
-#define M_BASE 2
-#define NUM 3
-#define M_NUM 4
-#define SYM 5
-#define M_SYM 6
-#define MERGE 7
-#define M_MERGE 8
-#define MEDIA 9
-#define M_MEDIA 10
+#define NUM 1
+#define SYM 2
+#define MERGE 3
+#define MEDIA 4
 
 ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
-ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
-ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
+// ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
+// ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
+// ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
+// ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
 
 // Windows??
 #define S_UNDO &kp C_AC_UNDO
@@ -273,6 +279,7 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
 
     keymap {
         compatible = "zmk,keymap";
+        
         default_layer {
             label = "Base";
             bindings = <
@@ -284,28 +291,28 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        game_layer {
-            label = "GBase";
-            bindings = <
-            &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       &kp A     &kp S       &kp D       &kp F       &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
-            &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
-                                            &kp LALT  &kp LCTRL  &kp LSHFT      &kp SPACE   &kp RET     XXX         XXX         XXX
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-        mac_layer {
-            label = "MBase";
-            bindings = <
-            &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
-            &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
-                                            XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        // game_layer {
+            // label = "GBase";
+            // bindings = <
+            // &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
+            // &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
+            // XXX       &kp A     &kp S       &kp D       &kp F       &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            // &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
+                                            // &kp LALT  &kp LCTRL  &kp LSHFT      &kp SPACE   &kp RET     XXX         XXX         XXX
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
+        // mac_layer {
+            // label = "MBase";
+            // bindings = <
+            // &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
+            // &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
+            // XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            // &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
+                                            // XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
         num_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
@@ -316,16 +323,16 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        mac_num_layer {
-            bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &swapper    &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
-            XXX     SK_LCTL     SK_LALT     SK(LGUI)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_9       XXX
-            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
-                                            XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        // mac_num_layer {
+            // bindings = <
+            // XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
+            // XXX     &swapper    &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
+            // XXX     SK_LCTL     SK_LALT     SK(LGUI)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_9       XXX
+            // XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
+                                            // XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
         sym_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
@@ -336,16 +343,16 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        mac_sym_layer {
-            bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         &dyn_macro_morph
-            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
-            XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
-                                            XXX         ___         ___         XXX         ___         ___         XXX         XXX
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        // mac_sym_layer {
+            // bindings = <
+            // XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
+            // XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         &dyn_macro_morph
+            // XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
+            // XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+                                            // XXX         ___         ___         XXX         ___         ___         XXX         XXX
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
         merge_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
@@ -356,16 +363,16 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        mac_merge_layer {
-            bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &swapper    &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         &dyn_macro_morph
-            XXX     SK_LCTR     SK_LALT     SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp         ENTER XXX
-            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
-                                            XXX         XXX         ___         ___         ___         ___         XXX         XXX
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        // mac_merge_layer {
+            // bindings = <
+            // XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
+            // XXX     &swapper    &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         &dyn_macro_morph
+            // XXX     SK_LCTR     SK_LALT     SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp         ENTER XXX
+            // XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+                                            // XXX         XXX         ___         ___         ___         ___         XXX         XXX
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
         media_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
@@ -376,16 +383,16 @@ mods = <(MOD_LSFT|MOD_RSFT)>;
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        mac_media_layer {
-            bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
-            XXX SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
-            XXX ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
-                                XXX ___        ___        ___    ___            ___           ___ XXX
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        // mac_media_layer {
+            // bindings = <
+            // XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
+            // XXX ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
+            // XXX SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
+            // XXX ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+                                // XXX ___        ___        ___    ___            ___           ___ XXX
+            // >;
+            // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        // };
     };
 };
 /*              58 KEY MATRIX / LAYOUT MAPPING
