@@ -32,12 +32,12 @@
 /* ------------------------ general config ----------------------- */
 // smart-layer config
 &caps_word {  
-    /delete-property/ ignore-modifiers; // mods deactivate, requires PR #1451
+    /delete-property/ ignore-modifiers; // mods deactivate, requires PR #1451 - PS not merged
     /delete-property/ ignore-numbers;
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
 };
 &num_word { 
-    layers = <NUM>; // requires PR #1441
+    layers = <NUM>; // requires PR #1441 - PS ??
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
 };
 
