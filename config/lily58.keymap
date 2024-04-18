@@ -15,16 +15,16 @@
 // This time make base win, base2 Game and base3 MacOS
 
 #define BASE 0
-#define G_BASE 0
-#define M_BASE 0
-#define NUM 1
-#define M_NUM 1
-#define SYM 2
-#define M_SYM 2
-#define MERGE 3
-#define M_MERGE 3
-#define MEDIA 4
-#define M_MEDIA 4
+#define G_BASE 1
+#define M_BASE 2
+#define NUM 3
+#define M_NUM 4
+#define SYM 5
+#define M_SYM 6
+#define MERGE 7
+#define M_MERGE 8
+#define MEDIA 9
+#define M_MEDIA 10
 
 ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
 ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
