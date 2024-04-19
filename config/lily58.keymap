@@ -37,7 +37,7 @@
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
 };
 &num_word { 
-    layers = <NUM>; // requires PR #1441 - PS ??
+    //layers = <NUM>; // requires PR #1441 - PS ??
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
 };
 
