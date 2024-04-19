@@ -399,12 +399,12 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
             ╰────────────-────┴──────────────-──╯              */
 
 // layer switching combos
-ZMK_COMBO(base_to_game, <&to 1>, RT5 RF5, BASE, 50)
-ZMK_COMBO(game_to_mac, <&to 2>, RT5 RF5, G_BASE, 50)
-ZMK_COMBO(mac_to_base, <&to 0>, RT5 RF5, M_BASE, 50)
+ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
+ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
+ZMK_COMBO(mac_to_base, &to 0, RT5 RF5, M_BASE, 50)
 
-// boot combos
-ZMK_COMBO(mac_to_base, <&bootloader>, LT5 LF5, ALL, 50)
+// boot combo
+ZMK_COMBO(mac_to_base, &bootloader, LT5 LF5, ALL, 50)
 
 // use global-quick-tap-ms for combos (requires PR 1387) - PS merged
 #undef COMBO_HOOK
