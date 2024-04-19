@@ -12,6 +12,7 @@
 #define TODO XXX
 #define ___ &trans
 
+#define BASE 0
 #define G_BASE 1
 #define M_BASE 2
 #define NUM 3
@@ -396,6 +397,11 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
 │ LF5 LF4 LF3 LF2 LF1 LF0 LEC │ REC RF0 RF1 RF2 RF3 RF4 RF5 │
 ╰───────────╮ LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 ╭───────────╯
             ╰────────────-────┴──────────────-──╯              */
+
+// layer switching combos
+ZMK_COMBO(base_to_game, <&to 1>, RT5 RF5, BASE, 50)
+ZMK_COMBO(game_to_mac, <&to 2>, RT5 RF5, G_BASE, 50)
+ZMK_COMBO(mac_to_base, <&to 0>, RT5 RF5, M_BASE, 50)
 
 // use global-quick-tap-ms for combos (requires PR 1387) - PS merged
 #undef COMBO_HOOK
