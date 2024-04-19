@@ -30,11 +30,7 @@
 #define S_PASTE &kp C_AC_PASTE
 #define S_REDO &kp C_AC_REDO
 
-ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
-ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
-ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
+
 
 /* ------------------------ general config ----------------------- */
 // smart-layer config
@@ -255,6 +251,35 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
 // bindings = <&dyn_macro PLAY>, <&dyn_macro RECORD>;
 // mods = <(MOD_LSFT|MOD_RSFT)>;
 // )
+
+//ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
+//ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
+//ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
+//ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
+//ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
+
+conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        merge_layer {
+            if-layers = <NUM SYM>;
+            then-layer = <MERGE>;
+        };
+
+        mac_num_layer {
+            if-layers = <M_BASE NUM>;
+            then-layer = <M_NUM>;
+        };
+        
+        mac_sym_layer {
+            if-layers = <M_BASE SYM>;
+            then-layer = <M_SYM>;
+        };
+       
+    };
+
+
+
 
 / {
     //chosen {
