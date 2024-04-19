@@ -30,6 +30,12 @@
 #define S_PASTE &kp C_AC_PASTE
 #define S_REDO &kp C_AC_REDO
 
+ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
+ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
+ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
+ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
+ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
+
 /* ------------------------ general config ----------------------- */
 // smart-layer config
 &caps_word {  
@@ -53,11 +59,6 @@
     tapping-term-ms = <200>;
 };
 
-ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
-ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
-ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
-ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
 
 /* ---------------------------- special behaviors --------------------------- */
 // Alt+Tab swapper, requires PR #1366 - not in main firmware
@@ -268,7 +269,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
             bindings = <
             &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp Af 
             &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
@@ -300,6 +301,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
         };
 
         num_layer {
+            label = "NUM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
@@ -311,6 +313,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
         };
 
         mac_num_layer {
+            label = "MNUM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
@@ -322,6 +325,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
         };
 
         sym_layer {
+            label = "SYM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
@@ -347,7 +351,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp         ENTER XXX
+            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
@@ -358,7 +362,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
-            XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp         ENTER XXX
+            XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
@@ -368,8 +372,8 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
         media_layer {
             bindings = <
             XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
-            XXX     SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
+            XXX     ___       ___       ___        ___        ___                                 &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
+            XXX     SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___                                 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
             XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
                                         XXX        ___        ___        ___    ___            ___           ___ XXX
             >;
@@ -379,9 +383,9 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
         mac_media_layer {
             bindings = <
             XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     ___       ___       ___        ___        ___    &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
-            XXX     SK(LCTL)  SK(LALT)  SK(LGUI)   SK(LSFT)   ___    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
-            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+            XXX     ___       ___       ___        ___        ___                                 &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
+            XXX     SK(LCTL)  SK(LALT)  SK(LGUI)   SK(LSFT)   ___                                 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
+            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT             ____&kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
                                 XXX ___        ___        ___    ___            ___           ___ XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
