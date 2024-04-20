@@ -194,7 +194,7 @@ ZMK_BEHAVIOR(smrt_num, hold_tap,
 ) 
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <300>; 
-    bindings = <&sl NUM>, <&sl NUM>, <&tog NUM>; // todo: to or tog? - ps replaced "num_word" with <&sl NUM>
+    bindings = <&kp backspace>, <&tog NUM>, <&tog NUM>; // todo: to or tog? - ps replaced "num_word" with <&tog NUM> and <&sl NUM> with backspace
 )
 
 /* ------------------------------- mod-morphs ------------------------------- */
@@ -365,9 +365,9 @@ conditional_layers {
 
         mac_sym_layer {
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
-            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 &kp HOME    &kp PG_DN   &kp PG_UP   &kp END         XXX         XXX
+            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp RA(LEFT)  &kp UP   RA(RIGHT)     XXX         XXX
+            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp LEFT    &kp DOWN      &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         ___         ___         XXX         ___         ___         XXX         XXX
             >;
@@ -387,9 +387,9 @@ conditional_layers {
 
         mac_merge_layer {
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
-            XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 &kp HOME    &kp PG_DN   &kp PG_UP   &kp END         XXX         XXX
+            XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp RA(LEFT)  &kp UP   RA(RIGHT)     XXX         XXX
+            XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp LEFT    &kp DOWN      &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
