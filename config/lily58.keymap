@@ -371,8 +371,8 @@ conditional_layers {
 
         mac_sym_layer {
             bindings = <
-             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
+             XXX     XXX         XXX         XXX         XXX         XXX                                &kp HOME    &kp PG_DN   &kp UP   &kp END         XXX         XXX
+            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp UP   &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         ___         ___         XXX         ___         ___         XXX         XXX
