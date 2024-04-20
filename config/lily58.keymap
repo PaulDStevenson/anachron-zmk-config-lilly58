@@ -252,6 +252,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
 // mods = <(MOD_LSFT|MOD_RSFT)>;
 // )
 
+// Not working__
 //ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
 //ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
 //ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
@@ -431,7 +432,8 @@ conditional_layers {
 // layer switching combos
 ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
 ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
-ZMK_COMBO(mac_to_base, &to 0, RT5 RF5, M_BASE, 50)
+ZMK_COMBO(mac_to_base, &tog 2, RT5 RF5, M_BASE, 50)
+
 
 // boot combo
 ZMK_COMBO(mac_to_base, &bootloader, LT5 LF5, ALL, 50)
