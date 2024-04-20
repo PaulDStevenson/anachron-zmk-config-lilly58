@@ -252,7 +252,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
 // mods = <(MOD_LSFT|MOD_RSFT)>;
 // )
 
-// Not working__
+// Not working
 //ZMK_CONDITIONAL_LAYER(NUM SYM, MERGE)
 //ZMK_CONDITIONAL_LAYER(M_BASE NUM, M_NUM)
 //ZMK_CONDITIONAL_LAYER(M_BASE SYM, M_SYM)
@@ -366,7 +366,7 @@ conditional_layers {
         mac_sym_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 &kp HOME    &kp PG_DN   &kp PG_UP   &kp END         XXX         XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp RA(LEFT)  &kp UP   RA(RIGHT)     XXX         XXX
+            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp RALT(LEFT)  &kp UP   RALT(RIGHT)     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp LEFT    &kp LEFT    &kp DOWN      &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         ___         ___         XXX         ___         ___         XXX         XXX
@@ -388,7 +388,7 @@ conditional_layers {
         mac_merge_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 &kp HOME    &kp PG_DN   &kp PG_UP   &kp END         XXX         XXX
-            XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp RA(LEFT)  &kp UP   RA(RIGHT)     XXX         XXX
+            XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp RALT(LEFT)  &kp UP   RALT(RIGHT)     XXX         XXX
             XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp LEFT    &kp DOWN      &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
