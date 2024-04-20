@@ -400,7 +400,7 @@ conditional_layers {
             XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     ___       ___       ___        ___        ___                                 &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
             XXX     SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___                                 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
-            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT  &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT           &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
                                         XXX        ___        ___        ___    ___            ___           ___ XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -411,7 +411,7 @@ conditional_layers {
             XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     ___       ___       ___        ___        ___                                 &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
             XXX     SK(LCTL)  SK(LALT)  SK(LGUI)   SK(LSFT)   ___                                 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
-            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT             ____ &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT             &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
                                 XXX ___        ___        ___    ___            ___           ___ XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
