@@ -258,6 +258,7 @@ ZMK_BEHAVIOR(fn_fslh, mod_morph, bindings = <&kp FSLH>, <&kp CAPS>; mods = <(MOD
 //ZMK_CONDITIONAL_LAYER(M_BASE MERGE, M_MERGE)
 //ZMK_CONDITIONAL_LAYER(M_BASE MEDIA, M_MEDIA)
 
+/ {
 conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -278,7 +279,7 @@ conditional_layers {
        
     };
 
-
+}
 
 
 / {
