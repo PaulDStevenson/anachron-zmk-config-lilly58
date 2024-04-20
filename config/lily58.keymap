@@ -194,7 +194,7 @@ ZMK_BEHAVIOR(smrt_num, hold_tap,
 ) 
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <300>; 
-    bindings = <&kp backspace>, <&tog NUM>, <&tog NUM>; // todo: to or tog? - ps replaced "num_word" with <&tog NUM> and <&sl NUM> with backspace
+    bindings = <&kp BSPC>, <&tog NUM>, <&tog NUM>; // todo: to or tog? - ps replaced "num_word" with <&tog NUM> and <&sl NUM> with backspace
 )
 
 /* ------------------------------- mod-morphs ------------------------------- */
