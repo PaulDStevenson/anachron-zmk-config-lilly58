@@ -452,6 +452,9 @@ ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
 ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
 ZMK_COMBO(mac_to_base, &tog 2, RT5 RF5, M_BASE, 50)
 
+// vertical ret
+ZMK_COMBO(vertical_return, &kp RET, LM1 LB1, BASE, 50)
+ZMK_COMBO(vertical_return, &kp RET, LM1 LB1, M_BASE, 50)
 
 // boot combo
 ZMK_COMBO(mac_to_base, &bootloader, LT5 LF5, ALL, 50)
