@@ -30,11 +30,11 @@
 #define S_PASTE &kp C_AC_PASTE
 #define S_REDO &kp C_AC_REDO
 
-// #define M_UNDO &kp LGUI(Z)
-// #define M_CUT &kp LGUI(X)
-// #define M_COPY &kp LGUI(C)
-// #define M_PASTE &kp LGUI(V)
-// #define M_REDO &kp LGUI(LS(Z))
+#define M_UNDO &kp LG(Z)
+#define M_CUT &kp LG(X)
+#define M_COPY &kp LG(C)
+#define M_PASTE &kp LG(V)
+#define M_REDO &kp LG(LS(Z))
 
 
 
@@ -360,7 +360,7 @@ conditional_layers {
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
             XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_9       XXX
-            XXX     LGUI(Z)     LGUI(X)     LGUI(C)     LGUI(V)     LGUI(LS(Z))      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
+            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -407,7 +407,7 @@ conditional_layers {
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
             XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
-            XXX     LGUI(Z)     LGUI(X)     LGUI(C)     LGUI(V)     LGUI(LS(Z))      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
