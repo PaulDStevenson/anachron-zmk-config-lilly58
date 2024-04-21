@@ -283,7 +283,16 @@ conditional_layers {
             if-layers = <M_BASE SYM>;
             then-layer = <M_SYM>;
         };
-       
+        
+        mac_merge_layer {
+            if-layers = <M_BASE MERGE>;
+            then-layer = <M_MERGE>;
+        };
+        
+        mac_media_layer {
+            if-layers = <M_BASE MEDIA>;
+            then-layer = <M_MEDIA>;
+        };
     };
 
 };
@@ -370,6 +379,7 @@ conditional_layers {
         };
 
         mac_sym_layer {
+            label = "MSYM";
             bindings = <
              XXX     XXX         XXX         XXX         XXX         XXX                                &kp HOME    &kp PG_DN   &kp PG_UP   &kp END         XXX         XXX
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp HOME    &kp PG_DN   &kp UP   &kp END     XXX         XXX
@@ -392,6 +402,7 @@ conditional_layers {
         };
 
         mac_merge_layer {
+            label = "MMERGE";
             bindings = <
              XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
@@ -414,6 +425,7 @@ conditional_layers {
         };
 
         mac_media_layer {
+            label = "MMEDIA";
             bindings = <
             XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     ___       ___       ___        ___        ___                                 &kp C_PREV     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
