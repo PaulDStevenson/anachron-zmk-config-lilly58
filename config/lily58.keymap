@@ -34,7 +34,7 @@
 #define M_CUT &kp LGUI(X)
 #define M_COPY &kp LGUI(C)
 #define M_PASTE &kp LGUI(V)
-#define M_REDO &kp LGUI()
+#define M_REDO &kp LGUI(LS(Z))
 
 
 
