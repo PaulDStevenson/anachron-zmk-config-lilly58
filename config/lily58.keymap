@@ -360,7 +360,7 @@ conditional_layers {
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast     XXX
             XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_9       XXX
-            XXX     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
+            XXX     &kp M_UNDO  &kp M_CUT   &kp M_COPY  &kp M_PASTE &kp M_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -407,7 +407,7 @@ conditional_layers {
              XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
             XXX     &kp LG(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
             XXX     SK(LCTL)    SK(LALT)    SK(LGUI)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
-            XXX     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+            XXX     &kp M_UNDO  &kp M_CUT   &kp M_COPY  &kp M_PASTE &kp M_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
