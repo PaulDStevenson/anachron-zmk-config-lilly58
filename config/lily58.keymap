@@ -381,11 +381,11 @@ conditional_layers {
         mac_sym_layer {
             label = "MSYM";
             bindings = <
-             XXX     XXX         XXX         XXX         XXX         XXX                                XXX         &kp PG_UP    &kp PG_DN   XXX             XXX         XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              XXX         &kp LG(LEFT) &kp UP      &kp LG(RIGHT)   XXX         XXX
-            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        XXX         &kp LEFT     &kp DOWN    &kp RIGHT       &kp ENTER   XXX
-            XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC     &kp DEL     &kp TAB         &key_repeat XXX
-                                            XXX         ___         ___         XXX         ___         ___         XXX         XXX
+             XXX     XXX         XXX         XXX         XXX         XXX                                ___         ___          ___     XXX             XXX     ___
+            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   XXX     ___
+            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        ___         ___          ___     ___             ___     ___
+            XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    ___         ___          ___     ___             ___     ___
+                                            XXX         ___         ___         XXX         ___         ___         ___          ___
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
