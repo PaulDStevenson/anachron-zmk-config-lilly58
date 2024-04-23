@@ -321,10 +321,10 @@ conditional_layers {
         game_layer {
             label = "GBase";
             bindings = <
-            &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       &kp A     &kp S       &kp D       &kp F       &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
-            &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
+            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
+            ___     &kp A     &kp S       &kp D       &kp F         ___                                 ___         H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) ___ 
+            ___     ___         ___         ___         ___         ___       ___               ___     ___         ___         ___         ___         ___         ___
                                             &kp LALT  &kp LCTRL  &kp LSHFT      &kp SPACE   &kp RET      SMRT_SYM  XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -333,10 +333,10 @@ conditional_layers {
         mac_layer {
             label = "MBase";
             bindings = <
-            &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
-            &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
+            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
+            ___       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   ___                                 ___         H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) ___ 
+            ___     ___         ___         ___         ___         ___       ___               ___     ___         ___         ___         ___         ___         ___
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -427,10 +427,10 @@ conditional_layers {
         mac_media_layer {
             label = "MMEDIA";
             bindings = <
-            ___     ___       ___       ___        ___        ___                                 ___         ___          ___     ___             ___     ___
-            XXX     ___       ___       ___        ___        ___                                 ___         ___          ___     ___             ___     ___
-            XXX     SK(LCTL)  ___  SK(LGUI)        ___        ___                                 ___         ___          ___     ___             ___     ___
-            XXX     ___       ___       ___        ___        ___       ___         ___           ___         ___          ___     ___             ___     ___
+            ___     ___       ___       ___        ___        ___                                 ___         ___          ___      ___             ___     ___
+            XXX     ___       ___       ___        ___        ___                                 ___         ___          ___      ___             ___     ___
+            XXX     SK(LCTL)  ___  SK(LGUI)        ___        ___                                 ___         ___          ___      ___             ___     ___
+            XXX     ___       ___       ___        ___        ___       ___         ___           ___         ___          ___      ___             ___     ___
                                         ___        ___        ___       ___         ___           ___         ___          ___
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
