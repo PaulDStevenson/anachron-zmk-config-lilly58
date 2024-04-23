@@ -370,8 +370,8 @@ conditional_layers {
             label = "SYM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              XXX         &kp HOME    &kp UP      &kp END     XXX         XXX
-            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        XXX         &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
+            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         ___         ___         XXX         ___         ___         XXX         XXX
             >;
@@ -392,9 +392,9 @@ conditional_layers {
 
         merge_layer {
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     XXX         XXX
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp ENTER   XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
+            XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp DOWN    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
