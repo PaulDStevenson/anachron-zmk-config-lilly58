@@ -346,7 +346,7 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast    &kp F12
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   LA(TAB)   &kp CARET                           &fn_pcnt    &fn_6       &fn_7       &fn_8       &fn_ast    &kp F12
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_9       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_3       &fn_4       &fn_5       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
@@ -358,7 +358,7 @@ conditional_layers {
             label = "MNUM";
             bindings = <
             ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
-            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         LG(TAB)     ___                                 ___         ___         ___         ___         ___         ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___         ___         ___         ___         ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
                                             ___         ___         ___         ___             ___     ___         ___         ___ 
@@ -373,7 +373,7 @@ conditional_layers {
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
-                                            XXX         ___         ___         XXX         ___         ___         XXX         XXX
+                                            ___         ___         ___         XXX         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
