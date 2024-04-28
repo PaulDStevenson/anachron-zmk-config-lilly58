@@ -489,10 +489,10 @@ GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 // NUM_COMBO(x, LB3 LF3, &kp X) PS - removed strange
 
 // PS - removed define
-ZMK_COMBO(esc_combo, LM3 LM2, &kp ESC, M_NUM, 50)
-// ZMK_COMBO(tab, LM2 LM1, &kp TAB, NUM M_NUM, 50)
-// ZMK_COMBO(lpar, LM2 LB2, &kp LPAR, NUM M_NUM, 50)
-// ZMK_COMBO(rpar, LM1 LB1, &kp RPAR, NUM M_NUM, 50)
+ZMK_COMBO(esc, &kp ESC, LM3 LM2, NUM M_NUM, 50)
+ZMK_COMBO(tab, &kp TAB, LM2 LM1, NUM M_NUM, 50)
+ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, NUM M_NUM, 50)
+ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, NUM M_NUM, 50)
 
 
 
