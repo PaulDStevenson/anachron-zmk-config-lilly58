@@ -480,14 +480,22 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 
 // combos on the numpad
-#define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50)
-NUM_COMBO(esc, LM3 LM2, &kp ESC)
-NUM_COMBO(tab, LM2 LM1, &kp TAB)
-NUM_COMBO(gui, LB3 LB2, &kp LGUI)
-NUM_COMBO(ent, LB2 LB1, &kp ENTER)
-NUM_COMBO(lpar, LM2 LB2, &kp LPAR)
-NUM_COMBO(rpar, LM1 LB1, &kp RPAR)
-NUM_COMBO(x, LB3 LF3, &kp X)
+// #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) PS - dual layers not working
+// NUM_COMBO(esc, LM3 LM2, &kp ESC)
+// NUM_COMBO(tab, LM2 LM1, &kp TAB)
+// NUM_COMBO(gui, LB3 LB2, &kp LGUI) PS - removed too low for lily
+// NUM_COMBO(ent, LB2 LB1, &kp ENTER) PS - removed too low for lily
+// NUM_COMBO(lpar, LM2 LB2, &kp LPAR)
+// NUM_COMBO(rpar, LM1 LB1, &kp RPAR) 
+// NUM_COMBO(x, LB3 LF3, &kp X) PS - removed strange
+
+// PS - removed define
+ZMK_COMBO(esc, LM3 LM2, &kp ESC, NUM M_NUM, 50)
+ZMK_COMBO(tab, LM2 LM1, &kp TAB, NUM M_NUM, 50)
+ZMK_COMBO(lpar, LM2 LB2, &kp LPAR, NUM M_NUM, 50)
+ZMK_COMBO(rpar, LM1 LB1, &kp RPAR, NUM M_NUM, 50)
+
+
 
 // combos on media
 #define MEDIA_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, MEDIA M_MEDIA, 50)
