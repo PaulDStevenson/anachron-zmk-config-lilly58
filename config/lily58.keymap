@@ -498,9 +498,9 @@ ZMK_COMBO(rpar, LM1 LB1, &kp RPAR, NUM M_NUM, 50)
 
 
 // combos on media
-#define MEDIA_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, MEDIA M_MEDIA, 50)
-NUM_COMBO(mute, RT1 RT2, &kp C_MUTE)
-NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
+// #define MEDIA_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, MEDIA M_MEDIA, 50)
+// NUM_COMBO(mute, RT1 RT2, &kp C_MUTE)
+// NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
 
 // vertical sfb combos
 #define VERTICAL_COMBO(keypos, key1, key2) \
