@@ -475,7 +475,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 // GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
 // GLOBAL_COMBO(numl, RB3 RB4, &num_word)
 GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
--
+
 // combos on the numpad
 #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM MNUM, 50)
 NUM_COMBO(esc, LT3 LT2, &kp ESC)
