@@ -560,7 +560,7 @@ NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
 
 // right thumb combos with right hand SYM layer
 #define SYM_THUMB_COMBO(keypos, bindings) THUMB_LAYER_COMBO(SYM, RH1, BASE NUM, keypos, bindings)
-// SYM_THUMB_COMBO(RT0, &kp HOME)
+SYM_THUMB_COMBO(RT0, &kp HOME)
 // SYM_THUMB_COMBO(RT1, &kp PG_DN)
 // SYM_THUMB_COMBO(RT2, &kp PG_UP)
 // SYM_THUMB_COMBO(RT3, &kp END)
