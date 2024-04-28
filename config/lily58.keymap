@@ -479,7 +479,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 
 // combos on the numpad PS - dual layers not working in define
-#define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
+// #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
 // NUM_COMBO(esc, LM3 LM2, &kp ESC)
 // NUM_COMBO(tab, LM2 LM1, &kp TAB)
 // NUM_COMBO(gui, LB3 LB2, &kp LGUI) PS - removed too low for lily
@@ -497,9 +497,9 @@ ZMK_COMBO(rpar, LM1 LB1, &kp RPAR, NUM M_NUM, 50)
 
 
 // combos on media
-#define MEDIA_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, MEDIA M_MEDIA, 50)
-NUM_COMBO(mute, RT1 RT2, &kp C_MUTE)
-NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
+// #define MEDIA_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, MEDIA M_MEDIA, 50)
+// NUM_COMBO(mute, RT1 RT2, &kp C_MUTE)
+// NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
 
 // vertical sfb combos
 #define VERTICAL_COMBO(keypos, key1, key2) \
