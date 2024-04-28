@@ -399,7 +399,7 @@ conditional_layers {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
             XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp DOWN    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
+            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
             >;
