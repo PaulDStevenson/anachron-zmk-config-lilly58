@@ -552,7 +552,7 @@ NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
                 timeout-ms = <40>; \
                 layers = <combo_layers>; \
                 key-positions = <thumb keypos>; \
-                bindings = <&macro_thumb_##thumb_param##_##thumb##_##keypos>, <&partial_hold_position thumb thumb_behavior thumb_param>; \ // PS requires PR https://github.com/zmkfirmware/zmk/pull/1809 
+                bindings = <&macro_thumb_##thumb_param##_##thumb##_##keypos>, <&partial_hold_position thumb thumb_behavior thumb_param>; \
                 slow-release;  \
                 slow-release-positions = <keypos>; \
                 COMBO_HOOK \
