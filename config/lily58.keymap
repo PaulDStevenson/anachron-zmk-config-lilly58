@@ -362,11 +362,11 @@ conditional_layers {
         mac_num_layer {
             label = "MNUM";
             bindings = <
-            ___     ___         ___         ___         ___         ___                                 ___         ___         ___         ___         ___         ___
-            ___     ___         ___         ___         &kp LG(TAB)     ___                             ___         ___         ___         ___         ___         ___
-            ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___         ___         ___         ___         ___
-            ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
-                                            ___         ___         ___         ___             ___     ___         ___         ___ 
+            ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         &kp LG(TAB)     ___                                 ___         ___         ___         ___         ___         ___
+            ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                                 ___         ___         ___         ___         ___         ___
+            ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
+                                            ___         ___             ___         ___             ___     ___         ___         ___ 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -398,7 +398,7 @@ conditional_layers {
         merge_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
-            XXX     &kp LA(TAB) &kp PLUS    &kp MINUS   &kp EQUAL   &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     &kp EQUAL   &kp PLUS      &kp MINUS     &kp LA(TAB)    &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
@@ -410,7 +410,7 @@ conditional_layers {
             label = "MMERGE";
             bindings = <
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
-            ___     &kp LG(TAB) ___         ___         ___         ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
+            ___     ___         ___         ___         &kp LG(TAB)  ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___           ___       ___         ___          ___     ___             ___     ___
                                             ___         ___         ___         ___           ___       ___         ___          ___
@@ -493,7 +493,6 @@ ZMK_COMBO(esc, &kp ESC, LM3 LM2, NUM M_NUM, 50)
 ZMK_COMBO(tab, &kp TAB, LM2 LM1, NUM M_NUM, 50)
 ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, NUM M_NUM, 50)
 ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, NUM M_NUM, 50)
-
 
 
 // combos on media
