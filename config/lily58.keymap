@@ -457,6 +457,7 @@ ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
 ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
 ZMK_COMBO(mac_to_base, &to 0, RT5 RF5, M_BASE, 50)
 
+
 // vertical ret
 ZMK_COMBO(vertical_return, &kp RET, LM1 LB1, BASE M_BASE, 50)
 // ZMK_COMBO(vertical_return, &kp RET, LM1 LB1, M_BASE, 50)
@@ -468,6 +469,8 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 #undef COMBO_HOOK
 #define COMBO_HOOK global-quick-tap-ms = <50>;
 
+
+
 // combos on every layer
 #define LAYER_COMBO(name, keypos, bindings, layer) ZMK_COMBO(name, bindings, keypos, layer, 50)
 #define GLOBAL_COMBO(name, keypos, bindings) LAYER_COMBO(name, keypos, bindings, ALL)
@@ -477,7 +480,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 
 // combos on the numpad
-#define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM M_NUM, 50)
+#define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50)
 NUM_COMBO(esc, LM3 LM2, &kp ESC)
 NUM_COMBO(tab, LM2 LM1, &kp TAB)
 NUM_COMBO(gui, LB3 LB2, &kp LGUI)
@@ -549,7 +552,7 @@ NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
                 timeout-ms = <40>; \
                 layers = <combo_layers>; \
                 key-positions = <thumb keypos>; \
-                bindings = <&macro_thumb_##thumb_param##_##thumb##_##keypos>, <&partial_hold_position thumb thumb_behavior thumb_param>; \
+                bindings = <&macro_thumb_##thumb_param##_##thumb##_##keypos>, <&partial_hold_position thumb thumb_behavior thumb_param>; \ // PS requires PR https://github.com/zmkfirmware/zmk/pull/1809 
                 slow-release;  \
                 slow-release-positions = <keypos>; \
                 COMBO_HOOK \
@@ -560,7 +563,7 @@ NUM_COMBO(display_off, RB1 RB2, &kp C_BKLT_TOG)
 
 // right thumb combos with right hand SYM layer
 #define SYM_THUMB_COMBO(keypos, bindings) THUMB_LAYER_COMBO(SYM, RH1, BASE NUM, keypos, bindings)
-SYM_THUMB_COMBO(RT0, &kp HOME)
+// SYM_THUMB_COMBO(RT0, &kp HOME)
 // SYM_THUMB_COMBO(RT1, &kp PG_DN)
 // SYM_THUMB_COMBO(RT2, &kp PG_UP)
 // SYM_THUMB_COMBO(RT3, &kp END)
