@@ -381,7 +381,7 @@ conditional_layers {
         sym_layer {
             label = "SYM";
             bindings = <
-            XXX     XXX         XXX         &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(F5)                      &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX         XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
@@ -393,7 +393,7 @@ conditional_layers {
         mac_sym_layer {
             label = "MSYM";
             bindings = <
-            ___     ___         ___         ___         ___         &kp LG(R)                           ___         ___          ___     ___             ___     ___
+            ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     &kp TILDE   ___         ___         ___         ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     &kp BSLH    &kp AT      ___         ___         &kp PIPE    ___           ___       ___         ___          ___     ___             ___     ___
