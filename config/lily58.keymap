@@ -44,6 +44,7 @@
 #define W_BSLH &kp NON_US_BSLH
 //#define W_DQM &kp AT_SIGN
 #define W_AT &kp DOUBLE_QUOTES
+#define W_POUND &kp LS(POUND)
 
 /* ------------------------ general config ----------------------- */
 // smart-layer config
@@ -369,7 +370,7 @@ conditional_layers {
             label = "MNUM";
             bindings = <
             ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
-            ___     ___         ___         ___         &kp LG(TAB)     ___                                 ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         &kp LG(TAB)     W_POUND                             ___         ___         ___         ___         ___         ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                    ___         ___         ___         ___         ___         ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
                                             ___         ___             ___         ___             ___     ___         ___         ___ 
