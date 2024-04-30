@@ -38,11 +38,12 @@
 #define M_REDO &kp LG(LS(Z))
 
 // Win10 UK Keyboard Symbols
-// &kp PIPE
-// &kp LS(NUBS)    
-// &kp BACKSLASH
-// &kp NON_US_BSLH
-// &kp AT_SIGN
+#define W_TILDE &kp PIPE
+#define W_PIPE &kp LS(NUBS)    
+#define W_HASH &kp BACKSLASH
+#define W_BSLH &kp NON_US_BSLH
+//#define W_DQM &kp AT_SIGN
+#define W_AT &kp DOUBLE_QUOTES
 
 /* ------------------------ general config ----------------------- */
 // smart-layer config
@@ -356,7 +357,7 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB)   &kp CARET                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) &kp CARET                           &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
@@ -369,7 +370,7 @@ conditional_layers {
             bindings = <
             ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
             ___     ___         ___         ___         &kp LG(TAB)     ___                                 ___         ___         ___         ___         ___         ___
-            ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                                 ___         ___         ___         ___         ___         ___
+            ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                    ___         ___         ___         ___         ___         ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
                                             ___         ___             ___         ___             ___     ___         ___         ___ 
             >;
@@ -379,7 +380,7 @@ conditional_layers {
         sym_layer {
             label = "SYM";
             bindings = <
-            XXX     XXX         XXX         &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(F5)                     &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX         XXX
+            XXX     XXX         XXX         &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(F5)                      &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX         XXX
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
@@ -403,7 +404,7 @@ conditional_layers {
         merge_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
-            XXX     &kp EQUAL   &kp PLUS      &kp MINUS     &kp LA(TAB)    &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) &kp CARET                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
@@ -415,7 +416,7 @@ conditional_layers {
             label = "MMERGE";
             bindings = <
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
-            ___     ___         ___         ___         &kp LG(TAB)  ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
+            ___     ___         ___         ___         &kp LG(TAB)  ___                                ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___           ___       ___         ___          ___     ___             ___     ___
                                             ___         ___         ___         ___           ___       ___         ___          ___
@@ -425,10 +426,10 @@ conditional_layers {
 
         media_layer {
             bindings = <
-            XXX     XXX       XXX       XXX        XXX        XXX                                 XXX         XXX         XXX         XXX         XXX         XXX
-            XXX     ___       ___       ___        ___        ___                                 &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT     &kp C_PP XXX
-            XXX     SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___                                 &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR     &kp C_MENU XXX
-            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT             &kp C_BRI_MIN  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_BRI_MAX  &kp CAPS XXX
+            XXX     XXX       XXX       XXX        XXX        XXX                                 XXX               XXX             XXX             XXX             XXX         XXX
+            XXX     ___       ___       ___        ___        ___                                 &kp C_PREV        &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT      &kp C_PP    XXX
+            XXX     SK_LGUI   SK_LALT   SK(LCTL)   SK(LSFT)   ___                                 &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR      &kp C_MENU  XXX
+            XXX     ___       ___       ___        ___        ___  &kp LBKT  &kp RBKT             &kp C_BRI_MIN     &kp C_BRI_DN    &kp C_BRI_UP    &kp C_BRI_MAX   &kp CAPS    XXX
                                         ___        ___        ___        ___    ___            ___           ___ ___
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
