@@ -374,7 +374,7 @@ conditional_layers {
         sym_layer {
             label = "SYM";
             bindings = <
-            XXX     UK_N3         UK_N2        UK_DQT         UK_N7         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
+            XXX     &kp UK_N3   &kp UK_DQT  &kp UK_N7   XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
             XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR  &kp RPAR  H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
