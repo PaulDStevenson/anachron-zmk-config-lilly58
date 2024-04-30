@@ -25,11 +25,11 @@
 #define MEDIA 9
 #define M_MEDIA 10
 
-#define S_UNDO &kp C_AC_UNDO
-#define S_CUT &kp C_AC_CUT
-#define S_COPY &kp C_AC_COPY
-#define S_PASTE &kp C_AC_PASTE
-#define S_REDO &kp C_AC_REDO
+#define S_UNDO &kp LC(Z)
+#define S_CUT &kp LC(X)
+#define S_COPY &kp LC(C)
+#define S_PASTE &kp LC(V)
+#define S_REDO &kp LC(LS(Z))
 
 #define M_UNDO &kp LG(Z)
 #define M_CUT &kp LG(X)
@@ -387,7 +387,7 @@ conditional_layers {
             label = "MSYM";
             bindings = <
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
-            ___     ___         ___         ___         ___         ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
+            ___     &kp TILDE   ___         ___         ___         ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     ___         ___         ___         ___         ___    ___              ___         ___         ___          ___     ___             ___     ___
                                             ___         ___         ___    ___              ___         ___         ___          ___
