@@ -358,7 +358,7 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) &kp CARET                           &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) &kp W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
@@ -382,9 +382,9 @@ conditional_layers {
             label = "SYM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
-            XXX     &kp TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     &kp W_TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
-            XXX     &kp BSLH    &kp AT      &kp LBRC    &kp RBRC    &kp PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+            XXX     &kp W_BSLH    &kp W_AT      &kp LBRC    &kp RBRC    &kp W_PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             ___         ___         ___         XXX         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
