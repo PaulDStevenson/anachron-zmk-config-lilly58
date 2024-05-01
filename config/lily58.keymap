@@ -358,7 +358,7 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) &kp W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
