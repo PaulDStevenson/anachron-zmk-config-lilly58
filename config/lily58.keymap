@@ -382,9 +382,9 @@ conditional_layers {
             label = "SYM";
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
-            XXX     &kp W_TILDE   &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     W_TILDE     &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
-            XXX     &kp W_BSLH    &kp W_AT      &kp LBRC    &kp RBRC    &kp W_PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
+            XXX     W_BSLH      W_AT      &kp LBRC    &kp RBRC    W_PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             ___         ___         ___         XXX         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
