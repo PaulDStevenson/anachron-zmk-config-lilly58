@@ -492,12 +492,16 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 #define COMBO_HOOK global-quick-tap-ms = <50>;
 
 // combos on every layer
-#define LAYER_COMBO(name, keypos, bindings, layer) ZMK_COMBO(name, bindings, keypos, layer, 50)
-#define GLOBAL_COMBO(name, keypos, bindings) LAYER_COMBO(name, keypos, bindings, ALL)
-GLOBAL_COMBO(bksp, RB1 RB2, &kp BSPC)
-GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
-GLOBAL_COMBO(numl, RB3 RB4, &num_word)
-GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
+// #define LAYER_COMBO(name, keypos, bindings, layer) ZMK_COMBO(name, bindings, keypos, layer, 50)
+// #define GLOBAL_COMBO(name, keypos, bindings) LAYER_COMBO(name, keypos, bindings, ALL)
+// GLOBAL_COMBO(bksp, RB1 RB2, &kp BSPC)
+// GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
+// GLOBAL_COMBO(numl, RB3 RB4, &num_word)
+// GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
+ZMK_COMBO(bksp, RB1 RB2, &kp BSPC, ALL)
+ZMK_COMBO(del, RB2 RB3, &kp DEL, ALL)
+ZMK_COMBO(numl, RB3 RB4, &num_word, ALL)
+ZMK_COMBO(dot_spc, LH0 RH0, &dot_spc, ALL)
 
 // combos on the numpad PS - dual layers not working in define
 // #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
