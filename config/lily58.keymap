@@ -474,6 +474,12 @@ ZMK_COMBO(mac_paste, M_PASTE, LF2 LF1, M_BASE, 50)
 ZMK_COMBO(esc, &kp ESC, LM3 LM2, BASE M_BASE, 50)
 ZMK_COMBO(tab, &kp TAB, LM2 LM1, BASE M_BASE, 50)
 
+// right side base layer combos to speed movement 
+ZMK_COMBO(win_forward_word, &kp LC(LEFT_ARROW), RM1 RB1, BASE, 50)
+ZMK_COMBO(mac_forward_word, &kp RA(LEFT_ARROW), RM1 RB1, M_BASE, 50)
+ZMK_COMBO(win_back_word, &kp LC(RIGHT_ARROW), RM3 RB3, BASE, 50)
+ZMK_COMBO(mac_back_word, &kp RA(RIGHT_ARROW), RM3 RB3, M_BASE, 50)
+
 // boot combo
 ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 
@@ -495,11 +501,11 @@ GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 // #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
 // NUM_COMBO(esc, LM3 LM2, &kp ESC)
 // NUM_COMBO(tab, LM2 LM1, &kp TAB)
-// NUM_COMBO(gui, LB3 LB2, &kp LGUI) PS - removed too low for lily
-// NUM_COMBO(ent, LB2 LB1, &kp ENTER) PS - removed too low for lily
+// NUM_COMBO(gui, LB3 LB2, &kp LGUI)
+// NUM_COMBO(ent, LB2 LB1, &kp ENTER)
 // NUM_COMBO(lpar, LM2 LB2, &kp LPAR)
 // NUM_COMBO(rpar, LM1 LB1, &kp RPAR) 
-// NUM_COMBO(x, LB3 LF3, &kp X) PS - removed strange
+// NUM_COMBO(x, LB3 LF3, &kp X)
 
 // combos on the numpad
 ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, NUM M_NUM, 50)
