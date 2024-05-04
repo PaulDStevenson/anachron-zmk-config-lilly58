@@ -58,8 +58,8 @@
 
 // requires module
 &num_word { 
-    layers = <NUM M_NUM>;
-    //continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
+    layers = <NUM>;
+    continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
 };
 
 // key-repeat config
@@ -327,7 +327,7 @@ conditional_layers {
             bindings = <
             &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            &num_word       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
             &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
