@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <behaviors/num_word.dtsi>
+
 // #include <dt-bindings/zmk/dynamic-macros.h> - needs PR
 
 #define XXX &none
@@ -53,10 +55,12 @@
     /delete-property/ ignore-numbers;
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
 };
-//&num_word { 
-    //layers = <NUM>; // requires PR #1441 - PS ??
-//    continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
-//};
+
+// requires module
+&num_word { 
+    layers = <NUM M_NUM>;
+    continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
+};
 
 // key-repeat config
 &key_repeat {
@@ -486,8 +490,6 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 // use global-quick-tap-ms for combos (requires PR 1387) - PS merged
 #undef COMBO_HOOK
 #define COMBO_HOOK global-quick-tap-ms = <50>;
-
-
 
 // combos on every layer
 #define LAYER_COMBO(name, keypos, bindings, layer) ZMK_COMBO(name, bindings, keypos, layer, 50)
