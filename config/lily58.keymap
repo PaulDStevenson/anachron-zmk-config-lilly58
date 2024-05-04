@@ -58,8 +58,8 @@
 
 // requires module
 &num_word { 
-    layers = <NUM M_NUM>;
-    continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>;
+    layers = <3 4>;
+    continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS PLUS ASTRK EQUAL FSLH DOT LPAR RPAR HASH DLLR PRCNT CARET LEFT RIGHT UP DOWN>; // from theo
 };
 
 // key-repeat config
@@ -212,10 +212,10 @@ ZMK_BEHAVIOR(smrt_num, hold_tap,
     bindings = <&mo>, <&num_dance>; 
 ) 
 
-// PS - I placed backspace here on tap, but this was too slow and over loaded the thumb
+// PS - I placed backspace here on tap, but this was too slow and over loaded the thumb. sl num is pretty useful for single numbers.
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <300>; 
-    bindings = <&sl NUM>, <&num_word>, <&tog NUM>; // todo: to or tog? - ps replaced "num_word" with <&tog NUM> and <&sl NUM> with backspace
+    bindings = <&sl NUM>, <&num_word>, <&tog NUM>; // todo: to or tog?
 )
 
 /* ------------------------------- mod-morphs ------------------------------- */
