@@ -215,7 +215,7 @@ ZMK_BEHAVIOR(smrt_num, hold_tap,
 // PS - I placed backspace here on tap, but this was too slow and over loaded the thumb. sl num is pretty useful for single numbers.
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <300>; 
-    bindings = <&sl NUM>, <&tog NUM>, <&tog NUM>; // todo: to or tog?
+    bindings = <&sl NUM>, <num_word, <&tog NUM>; // todo: to or tog?
 )
 
 /* ------------------------------- mod-morphs ------------------------------- */
@@ -327,7 +327,7 @@ conditional_layers {
             bindings = <
             &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            &num_word       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
             &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
@@ -494,9 +494,9 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 // combos on every layer
 #define LAYER_COMBO(name, keypos, bindings, layer) ZMK_COMBO(name, bindings, keypos, layer, 50)
 #define GLOBAL_COMBO(name, keypos, bindings) LAYER_COMBO(name, keypos, bindings, ALL)
-// GLOBAL_COMBO(bksp, RB1 RB2, &kp BSPC)
-// GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
-// GLOBAL_COMBO(numl, RB3 RB4, &num_word)
+GLOBAL_COMBO(bksp, RB1 RB2, &kp BSPC)
+GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
+GLOBAL_COMBO(numl, RB3 RB4, &num_word)
 GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
 
 // combos on the numpad PS - dual layers not working in define
