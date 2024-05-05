@@ -49,6 +49,9 @@
 #define W_AT &kp DOUBLE_QUOTES
 #define W_POUND &kp LS(POUND)
 
+// mac hash
+#define M_HASH &kp LA(NUMBER_3)
+
 /* ------------------------ general config ----------------------- */
 // smart-layer config
 &caps_word {  
@@ -372,9 +375,9 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &swapper    W_POUND                             &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    W_HASH                              &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
-            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_w_pound    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
+            XXX     W_HASH      W_AT        &kp MINUS   &swapper    &kp EQUAL                           &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp PLUS                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
+            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_w_pound &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -384,8 +387,8 @@ conditional_layers {
             label = "MNUM";
             bindings = <
             ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
-            ___     ___         ___         ___         &m_swapper      &kp POUND                           ___         ___         ___         ___         ___         ___
-            ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                    ___         ___         ___         ___         ___         ___
+            ___     M_HASH      &kp AT      ___         &m_swapper      ___                                 ___         ___         ___         ___         ___         ___
+            ___     SK(LCTL)    ___         SK(LGUI)    ___             ___                                 ___         ___         ___         ___         ___         ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     &fn_m_pound ___         ___         ___         ___         ___
                                             ___         ___             ___         ___             ___     ___         ___         ___ 
             >;
@@ -419,7 +422,7 @@ conditional_layers {
         merge_layer {
             bindings = <
             XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) W_POUND                             &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            XXX     W_HASH      W_AT        &kp MINUS   &swapper    &kp EQUAL                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat XXX
                                             XXX         XXX         ___         ___         ___         ___         XXX         XXX
@@ -431,7 +434,7 @@ conditional_layers {
             label = "MMERGE";
             bindings = <
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
-            ___     ___         ___         ___         &kp LG(TAB) &kp POUND                           ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
+            ___     M_HASH      &kp AT      ___         &m_swapper  ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___           ___       ___         ___          ___     ___             ___     ___
                                             ___         ___         ___         ___           ___       ___         ___          ___
@@ -478,15 +481,17 @@ ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
 ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
 ZMK_COMBO(mac_to_base, &to 0, RT5 RF5, M_BASE, 50)
 
-// left side base layer combos to reduce use of left thumb when mousing
-ZMK_COMBO(vertical_return, &kp RET, LM1 LB1, BASE M_BASE, 50)
-ZMK_COMBO(vertical_backspace, &kp BSPC, LM2 LB2, BASE M_BASE, 50)
+// left side base layer combos
+ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, BASE M_BASE, 50)
+ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, BASE M_BASE, 50)
 ZMK_COMBO(win_copy, S_COPY, LF3 LF2, BASE, 50)
 ZMK_COMBO(mac_copy, M_COPY, LF3 LF2, M_BASE, 50)
 ZMK_COMBO(win_paste, S_PASTE, LF2 LF1, BASE, 50)
 ZMK_COMBO(mac_paste, M_PASTE, LF2 LF1, M_BASE, 50)
 ZMK_COMBO(esc, &kp ESC, LM3 LM2, BASE M_BASE, 50)
 ZMK_COMBO(tab, &kp TAB, LM2 LM1, BASE M_BASE, 50)
+ZMK_COMBO(return, &kp RET, LB1 LB2, BASE M_BASE, 50)
+ZMK_COMBO(backspace, &kp BSPC, LB2 LB3, BASE M_BASE, 50)
 
 // right side base layer combos to speed movement 
 ZMK_COMBO(win_forward_word, &kp LC(LEFT_ARROW), RM1 RB1, BASE, 50)
