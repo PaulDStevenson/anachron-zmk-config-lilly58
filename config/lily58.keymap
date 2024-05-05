@@ -76,11 +76,17 @@
 
 
 /* ---------------------------- special behaviors --------------------------- */
-// Alt+Tab swapper, requires PR #1366 - not in main firmware
+// Alt+Tab swapper, requires module
 ZMK_BEHAVIOR(swapper, tri_state,
    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
    ignored-key-positions = <LM1>; // shift-alt-tab 
 )
+
+ZMK_BEHAVIOR(m_swapper, tri_state,
+   bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+   ignored-key-positions = <LM1>; // shift-alt-tab 
+)
+
 
 // dynamci macros, requires PR #1351 - not in main firmware
 // ZMK_BEHAVIOR(dyn_macro, dynamic_macro, wait-ms = <10>;)
@@ -328,7 +334,7 @@ conditional_layers {
             bindings = <
             &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            &swapper       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
             &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
@@ -363,7 +369,7 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &kp LA(TAB) W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &swapper W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    W_HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
@@ -375,7 +381,7 @@ conditional_layers {
             label = "MNUM";
             bindings = <
             ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
-            ___     ___         ___         ___         &kp LG(TAB)     &kp POUND                           ___         ___         ___         ___         ___         ___
+            ___     ___         ___         ___         &m_swapper      &kp POUND                           ___         ___         ___         ___         ___         ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                    ___         ___         ___         ___         ___         ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
                                             ___         ___             ___         ___             ___     ___         ___         ___ 
