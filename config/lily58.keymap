@@ -80,13 +80,11 @@
 ZMK_BEHAVIOR(swapper, tri_state,
    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
    ignored-key-positions = <LM1>; // shift-alt-tab
-   timeout-ms = <500>;
 )
 
 ZMK_BEHAVIOR(m_swapper, tri_state,
    bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
    ignored-key-positions = <LM1>; // shift-alt-tab
-   timeout-ms = <500>; 
 )
 
 
