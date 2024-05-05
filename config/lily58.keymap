@@ -270,7 +270,9 @@ ZMK_BEHAVIOR(fn_6, mod_morph, bindings = <&kp N6>, <&kp F6>; mods = <(MOD_LSFT|M
 ZMK_BEHAVIOR(fn_7, mod_morph, bindings = <&kp N7>, <&kp F7>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_BEHAVIOR(fn_8, mod_morph, bindings = <&kp N8>, <&kp F8>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_BEHAVIOR(fn_9, mod_morph, bindings = <&kp N9>, <&kp F9>; mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_BEHAVIOR(fn_dllr, mod_morph, bindings = <&kp DLLR>, <&kp F10>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+// ZMK_BEHAVIOR(fn_dllr, mod_morph, bindings = <&kp DLLR>, <&kp F10>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_BEHAVIOR(fn_w_pound, mod_morph, bindings = <W_POUND>, <&kp F10>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_BEHAVIOR(fn_m_pound, mod_morph, bindings = <&kp POUND>, <&kp F10>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_BEHAVIOR(fn_dot, mod_morph, bindings = <&kp DOT>, <&kp F11>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_BEHAVIOR(fn_pcnt, mod_morph, bindings = <&kp PRCNT>, <&kp F12>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_BEHAVIOR(fn_ast, mod_morph, bindings = <&kp ASTRK>, <&kp INSERT>; mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -370,9 +372,9 @@ conditional_layers {
             label = "NUM";
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
-            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &swapper W_POUND                         &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    W_HASH                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
-            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_dllr    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
+            XXX     &kp EQUAL   &kp PLUS    &kp MINUS   &swapper    W_POUND                             &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
+            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    W_HASH                              &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
+            XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_w_pound    &fn_4       &fn_5       &fn_6       &fn_fslh    XXX
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -384,7 +386,7 @@ conditional_layers {
             ___     ___         ___         ___         ___             ___                                 ___         ___         ___         ___         ___         ___
             ___     ___         ___         ___         &m_swapper      &kp POUND                           ___         ___         ___         ___         ___         ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___             &kp LA(NUMBER_3)                    ___         ___         ___         ___         ___         ___
-            ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     ___         ___         ___         ___         ___         ___
+            ___     M_UNDO      M_CUT       M_COPY      M_PASTE         M_REDO      ___             ___     &fn_m_pound ___         ___         ___         ___         ___
                                             ___         ___             ___         ___             ___     ___         ___         ___ 
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
