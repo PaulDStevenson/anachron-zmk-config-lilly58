@@ -77,10 +77,10 @@
 
 /* ---------------------------- special behaviors --------------------------- */
 // Alt+Tab swapper, requires PR #1366 - not in main firmware
-// ZMK_BEHAVIOR(swapper, tri_state,
-//    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-//    ignored-key-positions = <LM1>; // shift-alt-tab 
-// )
+ZMK_BEHAVIOR(swapper, tri_state,
+   bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+   ignored-key-positions = <LM1>; // shift-alt-tab 
+)
 
 // dynamci macros, requires PR #1351 - not in main firmware
 // ZMK_BEHAVIOR(dyn_macro, dynamic_macro, wait-ms = <10>;)
