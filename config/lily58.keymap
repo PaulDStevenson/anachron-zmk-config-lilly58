@@ -340,7 +340,7 @@ conditional_layers {
             bindings = <
             &kp ESC   &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
-            XXX       H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
+            &kp LSHFT H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
             &kp LCTRL &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RIGHT_SHIFT
                                             XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
@@ -482,22 +482,22 @@ ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
 ZMK_COMBO(mac_to_base, &to 0, RT5 RF5, M_BASE, 50)
 
 // left side base layer combos
-ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, BASE M_BASE, 50)
-ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, BASE M_BASE, 50)
 ZMK_COMBO(win_copy, S_COPY, LF3 LF2, BASE, 50)
 ZMK_COMBO(mac_copy, M_COPY, LF3 LF2, M_BASE, 50)
 ZMK_COMBO(win_paste, S_PASTE, LF2 LF1, BASE, 50)
 ZMK_COMBO(mac_paste, M_PASTE, LF2 LF1, M_BASE, 50)
 ZMK_COMBO(esc, &kp ESC, LM3 LM2, BASE M_BASE, 50)
 ZMK_COMBO(tab, &kp TAB, LM2 LM1, BASE M_BASE, 50)
-ZMK_COMBO(return, &kp RET, LB1 LB2, BASE M_BASE, 50)
-ZMK_COMBO(backspace, &kp BSPC, LB2 LB3, BASE M_BASE, 50)
+ZMK_COMBO(return, &kp RET, LM1 LB1, BASE M_BASE, 50)
+ZMK_COMBO(backspace, &kp BSPC, LM2 LB2, BASE M_BASE, 50)
 
 // right side base layer combos to speed movement 
 ZMK_COMBO(win_forward_word, &kp LC(LEFT_ARROW), RM1 RB1, BASE, 50)
 ZMK_COMBO(mac_forward_word, &kp RA(LEFT_ARROW), RM1 RB1, M_BASE, 50)
 ZMK_COMBO(win_back_word, &kp LC(RIGHT_ARROW), RM3 RB3, BASE, 50)
 ZMK_COMBO(mac_back_word, &kp RA(RIGHT_ARROW), RM3 RB3, M_BASE, 50)
+ZMK_COMBO(win_back_delete_word, &kp LC(BSPC), RM2 RB2, BASE, 50)
+ZMK_COMBO(mac_back_delete_word, &kp RA(BSPC), RM2 RB2, M_BASE, 50)
 
 // boot combo
 ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
@@ -517,7 +517,6 @@ ZMK_COMBO(bksp, &kp BSPC, RB1 RB2, ALL)
 ZMK_COMBO(del, &kp DEL, RB2 RB3, ALL)
 ZMK_COMBO(numl, &num_word, RB3 RB4,  ALL)
 ZMK_COMBO(dot_spc, &dot_spc, LH0 RH0, ALL)
-
 // combos on the numpad PS - dual layers not working in define
 // #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
 // NUM_COMBO(esc, LM3 LM2, &kp ESC)
