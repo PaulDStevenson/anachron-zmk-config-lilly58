@@ -398,10 +398,10 @@ conditional_layers {
         sym_layer {
             label = "SYM";
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   &kp INS     XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp LC(UP)  &kp LC(DOWN) &kp PRCNT  &kp INS     XXX
             XXX     W_TILDE     &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
-            XXX     W_BSLH      W_AT      &kp LBRC    &kp RBRC    W_PIPE    &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat     &kp K_CANCEL
+            XXX     W_BSLH      W_AT      &kp LBRC    &kp RBRC    W_PIPE    &kp LBKT    &kp RBKT        &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat &kp K_CANCEL
                                             ___         ___         ___         XXX         ___         ___         XXX         XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -410,7 +410,7 @@ conditional_layers {
         mac_sym_layer {
             label = "MSYM";
             bindings = <
-            ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
+            ___     ___         ___         ___         ___         ___                                 ___         &kp LG(UP)  &kp LG(DOWN) ___         ___     ___
             ___     &kp TILDE   ___         ___         ___         ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     &kp BSLH    &kp AT      ___         ___         &kp PIPE    ___           ___       ___         ___          ___     ___             ___     ___
@@ -421,7 +421,7 @@ conditional_layers {
 
         merge_layer {
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp PG_UP   &kp PG_DN   &kp PRCNT   XXX         XXX
+            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp LC(UP)  &kp LC(DOWN) ___        ___         ___
             XXX     W_HASH      W_AT        &kp MINUS   &swapper    &kp EQUAL                           &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
             XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    SMRT_MED                            &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat &kp K_CANCEL
@@ -433,7 +433,7 @@ conditional_layers {
         mac_merge_layer {
             label = "MMERGE";
             bindings = <
-            ___     ___         ___         ___         ___         ___                                 ___         ___          ___     ___             ___     ___
+            ___     ___         ___         ___         ___         ___                                 ___         &kp LG(UP)  &kp LG(DOWN) ___         ___     ___
             ___     M_HASH      &kp AT      ___         &m_swapper  ___                                 ___         &kp LG(LEFT) ___     &kp LG(RIGHT)   ___     ___
             ___     SK(LCTL)    ___         SK(LGUI)    ___         ___                                 ___         ___          ___     ___             ___     ___
             ___     M_UNDO      M_CUT       M_COPY      M_PASTE     M_REDO      ___           ___       ___         ___          ___     ___             ___     ___
