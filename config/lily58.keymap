@@ -476,6 +476,8 @@ conditional_layers {
 ╰───────────╮ LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 ╭───────────╯
             ╰────────────-────┴──────────────-──╯              */
 
+
+
 // layer switching combos
 ZMK_COMBO(base_to_game, &to 1, RT5 RF5, BASE, 50)
 ZMK_COMBO(game_to_mac, &to 2, RT5 RF5, G_BASE, 50)
@@ -516,6 +518,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 ZMK_COMBO(bksp, &kp BSPC, RB1 RB2, ALL)
 ZMK_COMBO(del, &kp DEL, RB2 RB3, ALL)
 ZMK_COMBO(numl, &num_word, RB3 RB4,  ALL)
+ZMK_COMBO(syml, &sk SYM, LB4 LB3, ALL)
 ZMK_COMBO(dot_spc, &dot_spc, LH0 RH0, ALL)
 // combos on the numpad PS - dual layers not working in define
 // #define NUM_COMBO(name, keypos, bindings) ZMK_COMBO(name, bindings, keypos, NUM, 50) 
