@@ -518,6 +518,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 ZMK_COMBO(bksp, &kp BSPC, RB1 RB2, ALL)
 ZMK_COMBO(del, &kp DEL, RB2 RB3, ALL)
 ZMK_COMBO(numl, &num_word, RB3 RB4,  ALL)
+// Could I create a sort of sym word?
 ZMK_COMBO(syml, &sk SYM, LB4 LB3, ALL)
 ZMK_COMBO(dot_spc, &dot_spc, LH0 RH0, ALL)
 // combos on the numpad PS - dual layers not working in define
@@ -533,6 +534,8 @@ ZMK_COMBO(dot_spc, &dot_spc, LH0 RH0, ALL)
 // combos on the numpad
 ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, NUM M_NUM, 50)
 ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, NUM M_NUM, 50)
+
+ZMK_COMBO(colon, &kp colon, RF1 RF2, NUM M_NUM, 50)
 
 
 // combos on media
