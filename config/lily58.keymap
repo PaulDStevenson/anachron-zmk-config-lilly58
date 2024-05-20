@@ -535,7 +535,7 @@ ZMK_COMBO(dot_spc, &dot_spc, LH0 RH0, ALL)
 ZMK_COMBO(lpar, &kp LPAR, LM2 LB2, NUM M_NUM, 50)
 ZMK_COMBO(rpar, &kp RPAR, LM1 LB1, NUM M_NUM, 50)
 
-ZMK_COMBO(colon, &kp colon, RF1 RF2, NUM M_NUM, 50)
+ZMK_COMBO(colon, &kp COLON, RF1 RF2, NUM M_NUM, 50)
 
 
 // combos on media
