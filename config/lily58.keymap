@@ -515,7 +515,7 @@ ZMK_COMBO(boot_loader, &bootloader, LT5 LF5, ALL, 50)
 // GLOBAL_COMBO(del, RB2 RB3, &kp DEL)
 // GLOBAL_COMBO(numl, RB3 RB4, &num_word)
 // GLOBAL_COMBO(dot_spc, LH0 RH0, &dot_spc)
-ZMK_COMBO(bksp, &kp BSPC, RB1 RB2, ALL)
+ZMK_COMBO(bksp, &kp BSPC, RB1 RB2, ALL, 70)
 ZMK_COMBO(del, &kp DEL, RB2 RB3, ALL)
 ZMK_COMBO(numl, &num_word, RB3 RB4,  ALL)
 // Could I create a sort of sym word?
