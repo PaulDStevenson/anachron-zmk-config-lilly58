@@ -342,7 +342,7 @@ conditional_layers {
             &kp TAB   &kp Q     &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp EQUAL
             SK(LSFT)  H_LGUI(A) H_LALT(S)   H_LCTL(D)   H_LSFT(F)   &kp G                               &kp H       H_RSFT(J)   H_RCTL(K)   H_RALT(L)   H_RGUI(SEMICOLON) &kp SQT 
             SK(LCTL) &kp Z     &kp X       &kp C       &kp V       &kp B       &kp LBKT    &kp RBKT    &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp K_CANCEL
-                                            XXX &kp     C_MUTE      SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
+                                            &kp LALT     &kp LGUI     SMRT_NUM    &spc_morph SK_SHFT      SMRT_SYM  XXX XXX
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -376,7 +376,7 @@ conditional_layers {
             bindings = <
             &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
             XXX     W_HASH      W_AT        &kp MINUS   &swapper    &kp EQUAL                           &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
-            XXX     SK_LGUI     SK_LALT     SK(LCTL)    SK(LSFT)    &kp PLUS                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
+            XXX     SK(LGUI)    SK(LALT)    SK(LCTL)    SK(LSFT)    &kp PLUS                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_w_pound &fn_4       &fn_5       &fn_6       &fn_fslh   &kp K_CANCEL
                                             XXX         XXX         ___         ___         &kp SPACE   ___         XXX         XXX 
             >;
