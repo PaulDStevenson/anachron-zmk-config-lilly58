@@ -374,7 +374,7 @@ conditional_layers {
         num_layer {
             label = "NUM";
             bindings = <
-            &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
+            &kp ESC &kp F1      &kp F2      &kp LC(LS(TAB))   &kp LC(TAB) &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
             XXX     W_HASH      W_AT        &kp MINUS   &swapper    &kp EQUAL                           &fn_pcnt    &fn_7       &fn_8       &fn_9       &fn_ast    &kp F12
             XXX     SK(LGUI)    SK(LALT)    SK(LCTL)    SK(LSFT)    &kp PLUS                            &fn_dot     &fn_0       &fn_1       &fn_2       &fn_3       XXX
             XXX     S_UNDO      S_CUT       S_COPY      S_PASTE     S_REDO      &kp LBKT    &kp RBKT    &fn_w_pound &fn_4       &fn_5       &fn_6       &fn_fslh   &kp K_CANCEL
@@ -398,8 +398,8 @@ conditional_layers {
         sym_layer {
             label = "SYM";
             bindings = <
-            XXX     XXX         XXX         XXX         XXX         XXX                                 XXX         &kp LC(UP)  &kp LC(DOWN) &kp PRCNT  &kp INS     XXX
-            XXX     W_TILDE     &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         XXX
+            &kp ESC &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                 &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp F11
+            XXX     W_TILDE     &kp LT      &kp LBKT    &kp RBKT    &kp GT                              &kp PG_UP   &kp HOME    &kp UP      &kp END     XXX         &kp F12
             XXX     H_LGUI(GRAVE) H_LALT(UNDER) &kp LPAR &kp RPAR   H_LCTL(AMPS)                        &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp ENTER   XXX
             XXX     W_BSLH      W_AT      &kp LBRC    &kp RBRC    W_PIPE    &kp LBKT    &kp RBKT        &kp ESC     &kp BSPC    &kp DEL     &kp TAB     &key_repeat &kp K_CANCEL
                                             ___         ___         ___         XXX         ___         ___         XXX         XXX
